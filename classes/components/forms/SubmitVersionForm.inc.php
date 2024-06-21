@@ -2,6 +2,7 @@
 
 use PKP\components\forms\FormComponent;
 use PKP\components\forms\FieldText;
+use PKP\components\forms\FieldOptions;
 
 class SubmitVersionForm extends FormComponent
 {
@@ -28,5 +29,17 @@ class SubmitVersionForm extends FormComponent
             'description' => __('plugins.generic.authorVersion.submitVersionModal.versionJustification.description'),
             'size' => 'large'
         ]));
+
+        $this->addField(new FieldOptions('versionType', [
+            'groupId' => 'default',
+            'isRequired' => true,
+            'label' => __('plugins.generic.authorVersion.versionType'),
+            'type' => 'radio',
+            'options' => [
+                ['value' => 'update', 'label' => __('plugins.generic.authorVersion.versionTypeUpdate')],
+                ['value' => 'revision', 'label' => __('plugins.generic.authorVersion.versionTypeRevision')],
+                ['value' => 'correction', 'label' => __('plugins.generic.authorVersion.versionTypeCorrection')],                                
+            ],
+        ]));           
     }
 }
