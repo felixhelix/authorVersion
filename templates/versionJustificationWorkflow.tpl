@@ -13,10 +13,12 @@
             v-bind="components.{$smarty.const.FORM_VERSION_JUSTIFICATION}"
             @set="set"
         ></pkp-form>
-        <span
+        <div
             v-if="workingPublication.status === getConstant('STATUS_PUBLISHED') || workingPublication.id != latestPublicationId"
-        >
+        >   
+            version type: {{ workingPublication.versionType }}
+            <hr/>
             {{ workingPublication.versionJustification }}
-        </span>
+        </div>
     </dropdown>
 </span>
