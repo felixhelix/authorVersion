@@ -24,7 +24,7 @@ msgid "plugins.generic.authorVersion.versionJustification"
 msgstr "Version justification"
 
 msgid "plugins.generic.authorVersion.lastVersionJustification"
-msgstr "Justification of the last version submitted"
+msgstr "Amendments to last version submitted"
 
 msgid "plugins.generic.authorVersion.submitVersionModal.versionJustification"
 msgstr "Justification"
@@ -52,3 +52,15 @@ msgstr "Justification for deleting"
 
 msgid "plugins.generic.authorVersion.deleteVersion.justification.description"
 msgstr "Provide a justification for deleting this version. This justification will be sent to the author."
+
+msgid "plugins.generic.authorVersion.versionType"
+msgstr "New version is ..."
+
+msgid "plugins.generic.authorVersion.versionTypeUpdate"
+msgstr "Update"
+
+msgid "plugins.generic.authorVersion.versionTypeRevision"
+msgstr "Revision"
+
+msgid "plugins.generic.authorVersion.versionTypeCorrection"
+msgstr "Correction"

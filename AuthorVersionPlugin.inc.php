@@ -70,6 +70,12 @@ class AuthorVersionPlugin extends GenericPlugin
             'validation' => ['nullable'],
         ];
 
+        $schema->properties->{'versionType'} = (object) [
+            'type' => 'string',
+            'apiSummary' => true,
+            'validation' => ['nullable'],
+        ];
+
         return false;
     }
 
