@@ -49,6 +49,7 @@ class AuthorVersionHandler extends APIHandler
     {
         $requestParams = $slimRequest->getParsedBody();
         $versionJustification = $requestParams['versionJustification'];
+        $versionType = $requestParams['versionType'];
         $submission = $this->getSubmission($slimRequest);
         $publication = $submission->getLatestPublication();
 
@@ -60,7 +61,10 @@ class AuthorVersionHandler extends APIHandler
         }
 
         $publicationService = Services::get('publication');
-        $publicationService->edit($publication, ['versionJustification' => $versionJustification], $this->getRequest());
+        $publicationService->edit($publication, [
+            'versionJustification' => $versionJustification, 
+            'versionType' => $versionType
+        ], $this->getRequest());
 
         $this->sendSubmittedVersionEmail($publication, $versionJustification);
 
