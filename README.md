@@ -4,6 +4,10 @@ This plugin allows the submission authors to create new versions of their submis
 
 It also changes behavior for when a posted submission has its relations changed to inform the preprint has been published in a journal as a article. In this case, the author is prevented from changing relations or creating new versions.
 
+## Changes to Original Plugin
+This plugin adds options to describe the type of version that is about to be submitted. These include: Update, Revision and Correction.
+See https://github.com/lepidus/authorVersion/issues/4 for more information.
+
 ## Compatibility
 
 The latest release of this plugin is compatible with the following PKP applications:
